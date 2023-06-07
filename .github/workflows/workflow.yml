@@ -1,5 +1,9 @@
-deploy:
-    needs: main
+on:
+  push:
+    branches:
+      - feature
+jobs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
